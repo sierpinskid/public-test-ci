@@ -34,11 +34,27 @@ jobs:
         shell: bash
         run: ls
         
+      - name: MKDIR
+        shell: bash
+        run: mkdir test_results
+        
+      - name: LS 2
+        shell: bash
+        run: ls
+        
+      - name: LS Apps
+        shell: bash
+        run: ls /Applications
+        continue-on-error: true
+        
+      - name: LS Apps Unity
+        shell: bash
+        run: ls /Applications/Unity
+        continue-on-error: true
+        
       - name: Run Unity Tests
         shell: bash
-        run: |
-          mkdir test_results
-          /Applications/Unity/Unity.app/Contents/MacOS/Unity -runTests -batchmode -projectPath $GITHUB_WORKSPACE -testResults test_results/results.xml
+        run: /Applications/Unity/Unity.app/Contents/MacOS/Unity -runTests -batchmode -projectPath $GITHUB_WORKSPACE -testResults test_results/results.xml
         
       - name: Print Results
         shell: bash
