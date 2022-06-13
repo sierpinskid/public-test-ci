@@ -37,7 +37,7 @@ jobs:
       - name: Run Unity Tests
         shell: bash
         run: |
-          mkdir /test_results
+          mkdir test_results
           /Applications/Unity/Unity.app/Contents/MacOS/Unity -runTests -batchmode -projectPath $GITHUB_WORKSPACE -testResults test_results/results.xml
         
       - name: Print Results
