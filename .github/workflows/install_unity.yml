@@ -29,5 +29,9 @@ jobs:
       - name: Install Unity
         shell: bash
         run: sudo installer -package Unity.pkg -target /
+        
+      - name: LS
+        shell: bash
+        run: ls
 
       
