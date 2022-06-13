@@ -16,3 +16,19 @@ jobs:
       - name: Print GITHUB_WORKSPACE
         shell: bash
         run: echo $GITHUB_WORKSPACE
+        
+      - name: DIR 1
+        shell: bash
+        run: mkdir test22
+        
+      - name: DIR LS
+        shell: bash
+        run: ls
+        
+      - name: DIR 2
+        shell: bash
+        run: mkdir /test
+        
+      - name: DIR LS 2
+        shell: bash
+        run: ls
